@@ -1,0 +1,71 @@
+q_states:
+  q_list: ["q0", "q1", "q2", "q3", "q4", "q5", "q6", "qacc", "qrej"]
+  initial: "q0"
+  final: ["qacc", "qrej"]
+  accept: ["qacc"]
+
+alphabet: ["a", "b"]
+
+tape_alphabet: ["a", "b", "X", "B"]
+
+blank: "B"
+
+delta:
+  - params: { initial_state: "q0", tape_input: "a" }
+    output: { final_state: "q1", tape_output: "B", tape_displacement: "R" }
+  - params: { initial_state: "q0", tape_input: "b" }
+    output: { final_state: "qrej", tape_output: "B", tape_displacement: "R" }
+  - params: { initial_state: "q0", tape_input: "X" }
+    output: { final_state: "qrej", tape_output: "B", tape_displacement: "R" }
+  - params: { initial_state: "q0", tape_input: "B" }
+    output: { final_state: "qrej", tape_output: "B", tape_displacement: "R" }
+  - params: { initial_state: "q1", tape_input: "a" }
+    output: { final_state: "q1", tape_output: "a", tape_displacement: "R" }
+  - params: { initial_state: "q1", tape_input: "b" }
+    output: { final_state: "q2", tape_output: "X", tape_displacement: "R" }
+  - params: { initial_state: "q1", tape_input: "X" }
+    output: { final_state: "q1", tape_output: "X", tape_displacement: "R" }
+  - params: { initial_state: "q1", tape_input: "B" }
+    output: { final_state: "qrej", tape_output: "B", tape_displacement: "R" }
+  - params: { initial_state: "q2", tape_input: "a" }
+    output: { final_state: "qrej", tape_output: "B", tape_displacement: "R" }
+  - params: { initial_state: "q2", tape_input: "b" }
+    output: { final_state: "q3", tape_output: "b", tape_displacement: "L" }
+  - params: { initial_state: "q2", tape_input: "X" }
+    output: { final_state: "qrej", tape_output: "B", tape_displacement: "R" }
+  - params: { initial_state: "q2", tape_input: "B" }
+    output: { final_state: "q6", tape_output: "B", tape_displacement: "L" }
+  - params: { initial_state: "q3", tape_input: "a" }
+    output: { final_state: "q4", tape_output: "a", tape_displacement: "L" }
+  - params: { initial_state: "q3", tape_input: "b" }
+    output: { final_state: "qrej", tape_output: "B", tape_displacement: "R" }
+  - params: { initial_state: "q3", tape_input: "X" }
+    output: { final_state: "q3", tape_output: "X", tape_displacement: "L" }
+  - params: { initial_state: "q3", tape_input: "B" }
+    output: { final_state: "qrej", tape_output: "B", tape_displacement: "R" }
+  - params: { initial_state: "q4", tape_input: "a" }
+    output: { final_state: "q4", tape_output: "a", tape_displacement: "L" }
+  - params: { initial_state: "q4", tape_input: "b" }
+    output: { final_state: "qrej", tape_output: "B", tape_displacement: "R" }
+  - params: { initial_state: "q4", tape_input: "X" }
+    output: { final_state: "q5", tape_output: "X", tape_displacement: "R" }
+  - params: { initial_state: "q4", tape_input: "B" }
+    output: { final_state: "q5", tape_output: "B", tape_displacement: "R" }
+  - params: { initial_state: "q5", tape_input: "a" }
+    output: { final_state: "q1", tape_output: "X", tape_displacement: "R" }
+  - params: { initial_state: "q5", tape_input: "b" }
+    output: { final_state: "qrej", tape_output: "B", tape_displacement: "R" }
+  - params: { initial_state: "q5", tape_input: "X" }
+    output: { final_state: "qrej", tape_output: "B", tape_displacement: "R" }
+  - params: { initial_state: "q5", tape_input: "B" }
+    output: { final_state: "qrej", tape_output: "B", tape_displacement: "R" }
+  - params: { initial_state: "q6", tape_input: "a" }
+    output: { final_state: "qrej", tape_output: "B", tape_displacement: "R" }
+  - params: { initial_state: "q6", tape_input: "b" }
+    output: { final_state: "qrej", tape_output: "B", tape_displacement: "R" }
+  - params: { initial_state: "q6", tape_input: "X" }
+    output: { final_state: "q6", tape_output: "X", tape_displacement: "L" }
+  - params: { initial_state: "q6", tape_input: "B" }
+    output: { final_state: "qacc", tape_output: "B", tape_displacement: "R" }
+
+simulation_strings: ["abababab", "abaabb", "aabb", "aaabbb"]

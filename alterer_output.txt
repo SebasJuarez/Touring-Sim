@@ -1,0 +1,177 @@
+Turing Machine Simulation
+=========================
+
+Input: aaaaaaab
+
+State: qinit, Head: 0, Tape: aaaaaaab -> State: qinit, Head: -1, Tape: aaaaaaab
+State: qinit, Head: -1, Tape: aaaaaaab -> State: q0, Head: 0, Tape: Xaaaaaaab
+State: q0, Head: 0, Tape: Xaaaaaaab -> State: q1, Head: 1, Tape: XXaaaaaab
+State: q1, Head: 1, Tape: XXaaaaaab -> State: q1, Head: 2, Tape: XXaaaaaab
+State: q1, Head: 2, Tape: XXaaaaaab -> State: q1, Head: 3, Tape: XXaaaaaab
+State: q1, Head: 3, Tape: XXaaaaaab -> State: q1, Head: 4, Tape: XXaaaaaab
+State: q1, Head: 4, Tape: XXaaaaaab -> State: q1, Head: 5, Tape: XXaaaaaab
+State: q1, Head: 5, Tape: XXaaaaaab -> State: q1, Head: 6, Tape: XXaaaaaab
+State: q1, Head: 6, Tape: XXaaaaaab -> State: q1, Head: 7, Tape: XXaaaaaab
+State: q1, Head: 7, Tape: XXaaaaaab -> State: q2, Head: 8, Tape: XXaaaaaaX
+State: q2, Head: 8, Tape: XXaaaaaaX -> State: q4, Head: 7, Tape: XXaaaaaaXB
+State: q4, Head: 7, Tape: XXaaaaaaXB -> State: q4, Head: 6, Tape: XXaaaaaaXB
+State: q4, Head: 6, Tape: XXaaaaaaXB -> State: q0, Head: 5, Tape: XXaaaaaaXB
+State: q0, Head: 5, Tape: XXaaaaaaXB -> State: q1, Head: 6, Tape: XXaaaaXaXB
+State: q1, Head: 6, Tape: XXaaaaXaXB -> State: q1, Head: 7, Tape: XXaaaaXaXB
+State: q1, Head: 7, Tape: XXaaaaXaXB -> State: q1, Head: 8, Tape: XXaaaaXaXB
+State: q1, Head: 8, Tape: XXaaaaXaXB -> State: q3, Head: 7, Tape: XXaaaaXaXB
+State: q3, Head: 7, Tape: XXaaaaXaXB -> State: q3, Head: 6, Tape: XXaaaaXaXB
+State: q3, Head: 6, Tape: XXaaaaXaXB -> State: q3, Head: 5, Tape: XXaaaaXaXB
+State: q3, Head: 5, Tape: XXaaaaXaXB -> State: q3, Head: 4, Tape: XXaaaaXaXB
+State: q3, Head: 4, Tape: XXaaaaXaXB -> State: q3, Head: 3, Tape: XXaaaaXaXB
+State: q3, Head: 3, Tape: XXaaaaXaXB -> State: q3, Head: 2, Tape: XXaaaaXaXB
+State: q3, Head: 2, Tape: XXaaaaXaXB -> State: q3, Head: 1, Tape: XXaaaaXaXB
+State: q3, Head: 1, Tape: XXaaaaXaXB -> State: q3, Head: 0, Tape: XXaaaaXaXB
+State: q3, Head: 0, Tape: XXaaaaXaXB -> State: q3, Head: -1, Tape: XXaaaaXaXB
+State: q3, Head: -1, Tape: XXaaaaXaXB -> State: q3, Head: -2, Tape: XXaaaaXaXB
+State: q3, Head: -2, Tape: XXaaaaXaXB -> State: qrej, Head: -1, Tape: BXXaaaaXaXB
+Final State: qrej
+Output: BXXaaaaXaXB
+Result: Not Accepted
+
+========================================
+Input: aaaabaab
+
+State: qinit, Head: 0, Tape: aaaabaab -> State: qinit, Head: -1, Tape: aaaabaab
+State: qinit, Head: -1, Tape: aaaabaab -> State: q0, Head: 0, Tape: Xaaaabaab
+State: q0, Head: 0, Tape: Xaaaabaab -> State: q1, Head: 1, Tape: XXaaabaab
+State: q1, Head: 1, Tape: XXaaabaab -> State: q1, Head: 2, Tape: XXaaabaab
+State: q1, Head: 2, Tape: XXaaabaab -> State: q1, Head: 3, Tape: XXaaabaab
+State: q1, Head: 3, Tape: XXaaabaab -> State: q1, Head: 4, Tape: XXaaabaab
+State: q1, Head: 4, Tape: XXaaabaab -> State: q2, Head: 5, Tape: XXaaaXaab
+State: q2, Head: 5, Tape: XXaaaXaab -> State: q0, Head: 4, Tape: XXaaaXaab
+State: q0, Head: 4, Tape: XXaaaXaab -> State: q0, Head: 5, Tape: XXaaaXaab
+State: q0, Head: 5, Tape: XXaaaXaab -> State: q1, Head: 6, Tape: XXaaaXXab
+State: q1, Head: 6, Tape: XXaaaXXab -> State: q1, Head: 7, Tape: XXaaaXXab
+State: q1, Head: 7, Tape: XXaaaXXab -> State: q2, Head: 8, Tape: XXaaaXXaX
+State: q2, Head: 8, Tape: XXaaaXXaX -> State: q4, Head: 7, Tape: XXaaaXXaXB
+State: q4, Head: 7, Tape: XXaaaXXaXB -> State: q4, Head: 6, Tape: XXaaaXXaXB
+State: q4, Head: 6, Tape: XXaaaXXaXB -> State: q0, Head: 5, Tape: XXaaaXXaXB
+State: q0, Head: 5, Tape: XXaaaXXaXB -> State: q0, Head: 6, Tape: XXaaaXXaXB
+State: q0, Head: 6, Tape: XXaaaXXaXB -> State: q1, Head: 7, Tape: XXaaaXXXXB
+State: q1, Head: 7, Tape: XXaaaXXXXB -> State: q1, Head: 8, Tape: XXaaaXXXXB
+State: q1, Head: 8, Tape: XXaaaXXXXB -> State: q3, Head: 7, Tape: XXaaaXXXXB
+State: q3, Head: 7, Tape: XXaaaXXXXB -> State: q3, Head: 6, Tape: XXaaaXXXXB
+State: q3, Head: 6, Tape: XXaaaXXXXB -> State: q3, Head: 5, Tape: XXaaaXXXXB
+State: q3, Head: 5, Tape: XXaaaXXXXB -> State: q3, Head: 4, Tape: XXaaaXXXXB
+State: q3, Head: 4, Tape: XXaaaXXXXB -> State: q3, Head: 3, Tape: XXaaaXXXXB
+State: q3, Head: 3, Tape: XXaaaXXXXB -> State: q3, Head: 2, Tape: XXaaaXXXXB
+State: q3, Head: 2, Tape: XXaaaXXXXB -> State: q3, Head: 1, Tape: XXaaaXXXXB
+State: q3, Head: 1, Tape: XXaaaXXXXB -> State: q3, Head: 0, Tape: XXaaaXXXXB
+State: q3, Head: 0, Tape: XXaaaXXXXB -> State: q3, Head: -1, Tape: XXaaaXXXXB
+State: q3, Head: -1, Tape: XXaaaXXXXB -> State: q3, Head: -2, Tape: XXaaaXXXXB
+State: q3, Head: -2, Tape: XXaaaXXXXB -> State: qrej, Head: -1, Tape: BXXaaaXXXXB
+Final State: qrej
+Output: BXXaaaXXXXB
+Result: Not Accepted
+
+========================================
+Input: abababab
+
+State: qinit, Head: 0, Tape: abababab -> State: qinit, Head: -1, Tape: abababab
+State: qinit, Head: -1, Tape: abababab -> State: q0, Head: 0, Tape: Xabababab
+State: q0, Head: 0, Tape: Xabababab -> State: q1, Head: 1, Tape: XXbababab
+State: q1, Head: 1, Tape: XXbababab -> State: q2, Head: 2, Tape: XXXababab
+State: q2, Head: 2, Tape: XXXababab -> State: q0, Head: 1, Tape: XXXababab
+State: q0, Head: 1, Tape: XXXababab -> State: q0, Head: 2, Tape: XXXababab
+State: q0, Head: 2, Tape: XXXababab -> State: q1, Head: 3, Tape: XXXXbabab
+State: q1, Head: 3, Tape: XXXXbabab -> State: q2, Head: 4, Tape: XXXXXabab
+State: q2, Head: 4, Tape: XXXXXabab -> State: q0, Head: 3, Tape: XXXXXabab
+State: q0, Head: 3, Tape: XXXXXabab -> State: q0, Head: 4, Tape: XXXXXabab
+State: q0, Head: 4, Tape: XXXXXabab -> State: q1, Head: 5, Tape: XXXXXXbab
+State: q1, Head: 5, Tape: XXXXXXbab -> State: q2, Head: 6, Tape: XXXXXXXab
+State: q2, Head: 6, Tape: XXXXXXXab -> State: q0, Head: 5, Tape: XXXXXXXab
+State: q0, Head: 5, Tape: XXXXXXXab -> State: q0, Head: 6, Tape: XXXXXXXab
+State: q0, Head: 6, Tape: XXXXXXXab -> State: q1, Head: 7, Tape: XXXXXXXXb
+State: q1, Head: 7, Tape: XXXXXXXXb -> State: q2, Head: 8, Tape: XXXXXXXXX
+State: q2, Head: 8, Tape: XXXXXXXXX -> State: q4, Head: 7, Tape: XXXXXXXXXB
+State: q4, Head: 7, Tape: XXXXXXXXXB -> State: q4, Head: 6, Tape: XXXXXXXXXB
+State: q4, Head: 6, Tape: XXXXXXXXXB -> State: q4, Head: 5, Tape: XXXXXXXXXB
+State: q4, Head: 5, Tape: XXXXXXXXXB -> State: q4, Head: 4, Tape: XXXXXXXXXB
+State: q4, Head: 4, Tape: XXXXXXXXXB -> State: q4, Head: 3, Tape: XXXXXXXXXB
+State: q4, Head: 3, Tape: XXXXXXXXXB -> State: q4, Head: 2, Tape: XXXXXXXXXB
+State: q4, Head: 2, Tape: XXXXXXXXXB -> State: q4, Head: 1, Tape: XXXXXXXXXB
+State: q4, Head: 1, Tape: XXXXXXXXXB -> State: q4, Head: 0, Tape: XXXXXXXXXB
+State: q4, Head: 0, Tape: XXXXXXXXXB -> State: q4, Head: -1, Tape: XXXXXXXXXB
+State: q4, Head: -1, Tape: XXXXXXXXXB -> State: q4, Head: -2, Tape: XXXXXXXXXB
+State: q4, Head: -2, Tape: XXXXXXXXXB -> State: qacc, Head: -1, Tape: BXXXXXXXXXB
+Final State: qacc
+Output: BXXXXXXXXXB
+Result: Accepted
+
+========================================
+Input: baabaabb
+
+State: qinit, Head: 0, Tape: baabaabb -> State: qinit, Head: -1, Tape: baabaabb
+State: qinit, Head: -1, Tape: baabaabb -> State: q0, Head: 0, Tape: Xbaabaabb
+State: q0, Head: 0, Tape: Xbaabaabb -> State: q0, Head: 1, Tape: Xbaabaabb
+State: q0, Head: 1, Tape: Xbaabaabb -> State: q1, Head: 2, Tape: XbXabaabb
+State: q1, Head: 2, Tape: XbXabaabb -> State: q1, Head: 3, Tape: XbXabaabb
+State: q1, Head: 3, Tape: XbXabaabb -> State: q2, Head: 4, Tape: XbXaXaabb
+State: q2, Head: 4, Tape: XbXaXaabb -> State: q0, Head: 3, Tape: XbXaXaabb
+State: q0, Head: 3, Tape: XbXaXaabb -> State: q0, Head: 4, Tape: XbXaXaabb
+State: q0, Head: 4, Tape: XbXaXaabb -> State: q1, Head: 5, Tape: XbXaXXabb
+State: q1, Head: 5, Tape: XbXaXXabb -> State: q1, Head: 6, Tape: XbXaXXabb
+State: q1, Head: 6, Tape: XbXaXXabb -> State: q2, Head: 7, Tape: XbXaXXaXb
+State: q2, Head: 7, Tape: XbXaXXaXb -> State: q2, Head: 8, Tape: XbXaXXaXb
+State: q2, Head: 8, Tape: XbXaXXaXb -> State: q4, Head: 7, Tape: XbXaXXaXbB
+State: q4, Head: 7, Tape: XbXaXXaXbB -> State: q5, Head: 6, Tape: XbXaXXaXbB
+State: q5, Head: 6, Tape: XbXaXXaXbB -> State: q5, Head: 5, Tape: XbXaXXaXbB
+State: q5, Head: 5, Tape: XbXaXXaXbB -> State: q0, Head: 4, Tape: XbXaXXaXbB
+State: q0, Head: 4, Tape: XbXaXXaXbB -> State: q0, Head: 5, Tape: XbXaXXaXbB
+State: q0, Head: 5, Tape: XbXaXXaXbB -> State: q1, Head: 6, Tape: XbXaXXXXbB
+State: q1, Head: 6, Tape: XbXaXXXXbB -> State: q1, Head: 7, Tape: XbXaXXXXbB
+State: q1, Head: 7, Tape: XbXaXXXXbB -> State: q2, Head: 8, Tape: XbXaXXXXXB
+State: q2, Head: 8, Tape: XbXaXXXXXB -> State: q4, Head: 7, Tape: XbXaXXXXXB
+State: q4, Head: 7, Tape: XbXaXXXXXB -> State: q4, Head: 6, Tape: XbXaXXXXXB
+State: q4, Head: 6, Tape: XbXaXXXXXB -> State: q4, Head: 5, Tape: XbXaXXXXXB
+State: q4, Head: 5, Tape: XbXaXXXXXB -> State: q4, Head: 4, Tape: XbXaXXXXXB
+State: q4, Head: 4, Tape: XbXaXXXXXB -> State: q4, Head: 3, Tape: XbXaXXXXXB
+State: q4, Head: 3, Tape: XbXaXXXXXB -> State: q4, Head: 2, Tape: XbXaXXXXXB
+State: q4, Head: 2, Tape: XbXaXXXXXB -> State: q0, Head: 1, Tape: XbXaXXXXXB
+State: q0, Head: 1, Tape: XbXaXXXXXB -> State: q0, Head: 2, Tape: XbXaXXXXXB
+State: q0, Head: 2, Tape: XbXaXXXXXB -> State: q1, Head: 3, Tape: XbXXXXXXXB
+State: q1, Head: 3, Tape: XbXXXXXXXB -> State: q1, Head: 4, Tape: XbXXXXXXXB
+State: q1, Head: 4, Tape: XbXXXXXXXB -> State: q1, Head: 5, Tape: XbXXXXXXXB
+State: q1, Head: 5, Tape: XbXXXXXXXB -> State: q1, Head: 6, Tape: XbXXXXXXXB
+State: q1, Head: 6, Tape: XbXXXXXXXB -> State: q1, Head: 7, Tape: XbXXXXXXXB
+State: q1, Head: 7, Tape: XbXXXXXXXB -> State: q1, Head: 8, Tape: XbXXXXXXXB
+State: q1, Head: 8, Tape: XbXXXXXXXB -> State: q3, Head: 7, Tape: XbXXXXXXXB
+State: q3, Head: 7, Tape: XbXXXXXXXB -> State: q3, Head: 6, Tape: XbXXXXXXXB
+State: q3, Head: 6, Tape: XbXXXXXXXB -> State: q3, Head: 5, Tape: XbXXXXXXXB
+State: q3, Head: 5, Tape: XbXXXXXXXB -> State: q3, Head: 4, Tape: XbXXXXXXXB
+State: q3, Head: 4, Tape: XbXXXXXXXB -> State: q3, Head: 3, Tape: XbXXXXXXXB
+State: q3, Head: 3, Tape: XbXXXXXXXB -> State: q3, Head: 2, Tape: XbXXXXXXXB
+State: q3, Head: 2, Tape: XbXXXXXXXB -> State: q3, Head: 1, Tape: XbXXXXXXXB
+State: q3, Head: 1, Tape: XbXXXXXXXB -> State: q3, Head: 0, Tape: XbXXXXXXXB
+State: q3, Head: 0, Tape: XbXXXXXXXB -> State: q1, Head: -1, Tape: XbXXXXXXXB
+State: q1, Head: -1, Tape: XbXXXXXXXB -> State: q1, Head: 0, Tape: XbXXXXXXXB
+State: q1, Head: 0, Tape: XbXXXXXXXB -> State: q2, Head: 1, Tape: XXXXXXXXXB
+State: q2, Head: 1, Tape: XXXXXXXXXB -> State: q2, Head: 2, Tape: XXXXXXXXXB
+State: q2, Head: 2, Tape: XXXXXXXXXB -> State: q2, Head: 3, Tape: XXXXXXXXXB
+State: q2, Head: 3, Tape: XXXXXXXXXB -> State: q2, Head: 4, Tape: XXXXXXXXXB
+State: q2, Head: 4, Tape: XXXXXXXXXB -> State: q2, Head: 5, Tape: XXXXXXXXXB
+State: q2, Head: 5, Tape: XXXXXXXXXB -> State: q2, Head: 6, Tape: XXXXXXXXXB
+State: q2, Head: 6, Tape: XXXXXXXXXB -> State: q2, Head: 7, Tape: XXXXXXXXXB
+State: q2, Head: 7, Tape: XXXXXXXXXB -> State: q2, Head: 8, Tape: XXXXXXXXXB
+State: q2, Head: 8, Tape: XXXXXXXXXB -> State: q4, Head: 7, Tape: XXXXXXXXXB
+State: q4, Head: 7, Tape: XXXXXXXXXB -> State: q4, Head: 6, Tape: XXXXXXXXXB
+State: q4, Head: 6, Tape: XXXXXXXXXB -> State: q4, Head: 5, Tape: XXXXXXXXXB
+State: q4, Head: 5, Tape: XXXXXXXXXB -> State: q4, Head: 4, Tape: XXXXXXXXXB
+State: q4, Head: 4, Tape: XXXXXXXXXB -> State: q4, Head: 3, Tape: XXXXXXXXXB
+State: q4, Head: 3, Tape: XXXXXXXXXB -> State: q4, Head: 2, Tape: XXXXXXXXXB
+State: q4, Head: 2, Tape: XXXXXXXXXB -> State: q4, Head: 1, Tape: XXXXXXXXXB
+State: q4, Head: 1, Tape: XXXXXXXXXB -> State: q4, Head: 0, Tape: XXXXXXXXXB
+State: q4, Head: 0, Tape: XXXXXXXXXB -> State: q4, Head: -1, Tape: XXXXXXXXXB
+State: q4, Head: -1, Tape: XXXXXXXXXB -> State: q4, Head: -2, Tape: XXXXXXXXXB
+State: q4, Head: -2, Tape: XXXXXXXXXB -> State: qacc, Head: -1, Tape: BXXXXXXXXXB
+Final State: qacc
+Output: BXXXXXXXXXB
+Result: Accepted
+
+========================================
